@@ -1,6 +1,3 @@
-#include <math.h>
-#include <stddef.h>
-
 union Float {
     float f;
     unsigned i;
