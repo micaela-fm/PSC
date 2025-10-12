@@ -26,7 +26,6 @@ void sumtimes(struct hmstime *res, const struct hmstime times[], size_t ntimes)
     hours += minutes / 60; 
     minutes %= 60; 
 
-
     res->seconds = seconds;
     res->minutes = minutes;
     res->hours = hours;    
