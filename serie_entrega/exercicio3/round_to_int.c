@@ -1,3 +1,6 @@
+#include <limits.h>
+#include <stdbool.h>
+
 union Float {
     float f;
     unsigned i;

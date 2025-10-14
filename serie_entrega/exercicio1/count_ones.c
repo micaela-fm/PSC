@@ -5,10 +5,8 @@ int count_ones(int value) {
     unsigned int u_value = value;
 
     while ( u_value != 0) {
-        if (u_value & 1u) {
-            ones_counter++;
-        }
-        u_value = u_value >> 1;
+        ones_counter += u_value & 1u;
+        u_value >>= 1;
     }
 
     return ones_counter;
