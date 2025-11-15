@@ -1,0 +1,204 @@
+# GDBtk Init file
+# GDBtkInitVersion: 1
+[global]
+	font/bold=-family courier -size 12 -weight bold
+	font/default=-family Courier -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	font/menu=-family {Nimbus Sans} -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	font/status=-family {Nimbus Sans} -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	font/fixed=-family Courier -size 12 -weight normal -slant roman -underline 0 -overstrike 0
+	font/italic=-family courier -size 12 -slant italic
+[gdb]
+	font_cache=Courier {Courier 10 Pitch} Cousine {DejaVu Sans Mono} {EB Garamond Initials} {EB Garamond Initials Fill1} FreeMono {Go Mono} {Liberation Mono} MathJax_Vector MathJax_Vector-Bold {Nimbus Mono PS} {Noto Color Emoji} {Noto Mono} {Noto Sans SignWriting} {PT Mono} {Ubuntu Mono} {Ubuntu Sans Mono}
+	main_names=main MAIN___ MAIN__ cyg_user_start cyg_start
+	compat=default
+	use_icons=1
+	B1_behavior=1
+	recent-projects=/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test /home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test
+	use_color_schemes=1
+	ImageDir=images2
+	mode=0
+	control_target=1
+[load]
+	main=1
+	verbose=0
+	baud=38400
+	exit=1
+	port=/dev/ttyS0
+	check=0
+	bp_at_func=0
+[console]
+	wrap=1
+	prompt=(gdb) 
+	prompt_fg=DarkGreen
+	log_fg=#00b300
+	font=global/fixed
+	target_fg=blue
+	error_fg=red
+	deleteLeft=1
+[src]
+	tab_size=8
+	run_attach=0
+	trace_fg=magenta
+	thread_fg=pink
+	font=global/fixed
+	top_control=1
+	bp_fg=red
+	run_run=1
+	run_cont=0
+	source2_fg=navy
+	break_fg=black
+	handlebg=red
+	disabled_fg=black
+	run_load=0
+	temp_bp_fg=orange
+	disassembly-flavor=att
+	PC_TAG=#00b300
+	variableBalloons=1
+	STACK_TAG=gold
+	BROWSE_TAG=#9595e2
+	linenums=1
+[reg]
+	r13-format=x
+	fs_base-format=x
+	fctrl-format=x
+	ymm11-format=x
+	r8-format=x
+	ymm9-format=x
+	r12-format=x
+	ds-format=x
+	ftag-format=x
+	fstat-format=x
+	ymm10-format=x
+	rsp-format=x
+	ymm8-format=x
+	r11-format=x
+	rbx-format=x
+	st7-format=f
+	rip-format=x
+	ymm7-format=x
+	r10-format=x
+	st6-format=f
+	es-format=x
+	fiseg-format=x
+	foseg-format=x
+	ymm6-format=x
+	st5-format=f
+	rcx-format=x
+	gs_base-format=x
+	ymm5-format=x
+	st4-format=f
+	fs-format=x
+	ymm4-format=x
+	st3-format=f
+	rdx-format=x
+	ymm3-format=x
+	st2-format=f
+	gs-format=x
+	ymm15-format=x
+	fioff-format=x
+	ymm2-format=x
+	fop-format=x
+	fooff-format=x
+	st1-format=f
+	mxcsr-format=x
+	rsi-format=x
+	ymm14-format=x
+	ymm1-format=x
+	st0-format=f
+	r15-format=x
+	eflags-format=x
+	ymm13-format=x
+	ymm0-format=x
+	rbp-format=x
+	cs-format=x
+	r14-format=x
+	rdi-format=x
+	rows=16
+	ymm12-format=x
+	ss-format=x
+	r9-format=x
+	rax-format=x
+[stack]
+	font=global/fixed
+[locals]
+[watch]
+[bp]
+	show_threads=0
+[search]
+	filter_mode=starts with
+[process]
+[geometry]
+	.localswin0.localswin=1061x230+1975+719
+	.srcwin0.srcwin=877x662+2159+-8
+[help]
+[browser]
+	layout=2
+	hide_h=0
+[kod]
+	show_icon=0
+[window]
+	active={ManagedWin::open SrcWin}
+[session]
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/dirs=$cdir:$cwd
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/executable=/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/pwd=/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/run_load=0
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/run_run=1
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/run_attach=0
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/pwd=/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/bg=0
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/run_load=0
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/run_attach=0
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/run_run=1
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/bg=0
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/dirs=$cdir:$cwd
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/run_cont=0
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/dirs=$cdir:$cwd
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/executable=/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/run_run=1
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/breakpoints={{break /home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_asm.s:8} 1 {} {}} {{break /home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test.c:23} 1 {} {}}
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/bg=0
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/run_cont=0
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/breakpoints={{break /home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int.c:33} 1 {} {}}
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/breakpoints={{break /home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_asm.s:7} 1 {} {}} {{break /home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test.c:32} 1 {} {}} {{break /home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test.c:31} 1 {} {}}
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/run_attach=0
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio1/reverse_test/run_load=0
+	/home/micaela/PSC/PSC/serie_entrega/exercicio3/round_to_int_test/pwd=/home/micaela/PSC/PSC/serie_entrega/exercicio3
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/run_cont=0
+	/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test/executable=/home/micaela/ISEL/PSC/PSC/tp1_entrega/exercicio2/my_memmove_test
+[mem]
+	size=8
+	ascii_char=.
+	numbytes=0
+	color=green
+	format=x
+	ascii=1
+	bytes_per_row=8
+[bg]
+	9=#ffb0ff
+	8=#ffffb0
+	7=#d0d0d0
+	6=#d0d0ff
+	5=#d0ffd0
+	4=#d0ffff
+	3=#ffd0d0
+	2=#ffd0ff
+	1=#ffffd0
+	15=#d0b0d0
+	0=#ffffff
+	14=#b0b0b0
+	13=#b0b0ff
+	12=#b0ffb0
+	11=#b0ffff
+	10=#ffb0b0
+[ipc]
+	cont_button=1
+	port=9909
+	stop_button=1
+	step_button=1
+	run_button=1
+	enabled=0
+	exit=1
