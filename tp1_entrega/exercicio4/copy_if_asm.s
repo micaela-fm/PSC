@@ -14,51 +14,59 @@ size_t copy_if(void *dst, void *src, size_t src_size, size_t elem_size,
 	.text
 	.global	copy_if
 copy_if:
-	mov		%rdi, %r11			# dst_iter = dst
-	push	%rdi
-	push	%r12	
-	mov		%rdx, %r12		
-	imul	%rcx, %r12			# last = src_size * elem_size
-	add		%rsi, %r12			# last += src
-	mov		%rsi, %r10			# iter = src
+	push	%rbx
+	push	%r12
+	push	%r13
+	push	%r14
+	push	%r15
+
+	mov		%rdi, %rbx			# dst_iter = dst
+	mov		%rdi, %r13			# save dst
+	mov		%rsi, %r15			# iter = src
+	mov		%rcx, %r14			# save elem_size
+
+	# last = src + src_size * elem_size
+	mov		%rdx, %r12
+	imul	%r14, %r12
+	add		%r15, %r12
+
 for:
-	cmp		%r12, %r10			# iter < last
+	cmp		%r12, %r15			# iter < last
 	jge		for_end
+
 if:
-	push	%r10
-	push	%r11	
-	push	%rcx
-	push	%rsi
-	mov		%r10, %rdi			# 1st arg: iter
+	push	%r8
+	push	%r9
+	mov		%r15, %rdi			# 1st arg: iter
 	mov		%r9, %rsi			# 2nd arg: context
 	call 	*%r8				# predicate(iter, context)
-	pop		%rsi
-	pop		%rcx
-	pop		%r11
-	pop		%r10
+	pop		%r9
+	pop		%r8
 	test	%rax, %rax
 	jz		if_end
-	push	%rcx
-	push	%r10
-	push	%r11
-	mov		%r11, %rdi			# 1st arg: dst_iter
-	mov		%r10, %rsi			# 2nd arg: iter
-	mov		%rcx, %rdx			# 3rd arg: elem_size
+
+	mov		%rbx, %rdi			# 1st arg: dst_iter
+	mov		%r15, %rsi			# 2nd arg: iter
+	mov		%r14, %rdx			# 3rd arg: elem_size
 	call	memcpy				# memcpy(dst_iter, iter, elem_size);
-	pop		%r11
-	pop		%r10
-	pop		%rcx
-	add		%rcx, %r11			# dst_iter += elem_size;
+	add		%r14, %rbx			# dst_iter += elem_size;
 if_end:
-	add		%rcx, %r10			# iter += elem_size
+
+	add		%r14, %r15			# iter += elem_size
 	jmp 	for
 for_end:
-	pop		%r12
-	pop		%rdi
-	mov		%r11, %rax
-	sub		%rdi, %rax
+
+	# return (dst_iter - orig_dst) / elem_size
+	mov		%rbx, %rax
+	sub		%r13, %rax
 	xor		%rdx, %rdx
-	div		%rcx
+	div		%r14
+
+	pop		%r15
+	pop		%r14
+	pop		%r13
+    pop		%r12
+    pop		%rbx
 	ret
 
 	.section	.note.GNU-stack
