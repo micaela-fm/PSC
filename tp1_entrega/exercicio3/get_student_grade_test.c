@@ -24,7 +24,7 @@ static short _get_student_grade(Class *class, int number, int grade_idx) {
 	return grade;
 }
 
-static struct student student1[] = {
+static struct student students[] = {
 	{6000, "Ana",   {10, 13, 14,  9}},
 	{5000, "Rui",   {11,  9, 17, 19}},
 	{4000, "Luis",  {14,  8, 16, 17}},
@@ -33,7 +33,7 @@ static struct student student1[] = {
 	{1000, "Abel",  {10, 11, 14, 20}}
 };
 
-static struct class class1 = { .length = 6, .students = student1 };
+static struct class class1 = { .length = 6, .students = students };
 
 static struct {
 	struct class *class;
